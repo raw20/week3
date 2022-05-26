@@ -22,6 +22,8 @@ backBtn.addEventListener("click", () => {
   //index값이 0보다 작은경우 0으로 바꾼다.
   imgBanner.style.marginLeft = `-${mainBanner.clientWidth * currentIndex}px`;
   //index 만큼 마진을 주어 옆으로 밀기.
+  list[currentIndex].classList.add(ACTIVE_NAME); //현재 인덱스에 클래스 추가
+  list[currentIndex + 1].classList.remove(ACTIVE_NAME); // 뒤로갔으니 현재 인덱스 다음 칸에 엑티브된 클래스 이름 제거
   clearInterval(interval);
   interval = getInterval();
 });
@@ -31,6 +33,8 @@ goBtn.addEventListener("click", () => {
   currentIndex =
     currentIndex >= bgInner.length ? bgInner.length - 1 : currentIndex;
   imgBanner.style.marginLeft = `-${mainBanner.clientWidth * currentIndex}px`;
+  list[currentIndex].classList.add(ACTIVE_NAME);
+  list[currentIndex - 1].classList.remove(ACTIVE_NAME);
   clearInterval(interval);
   interval = getInterval();
 });
@@ -39,7 +43,6 @@ goBtn.addEventListener("click", () => {
 list.forEach((index) => {
   index.addEventListener("click", () => {
     for (let i = 0; i < list.length; i++) {
-      console.log("list의 길이 : ", list.length);
       if (index.className !== "list active") {
         index.classList.add(ACTIVE_NAME);
         list[i].classList.remove(ACTIVE_NAME);
@@ -73,18 +76,12 @@ function getInterval() {
     currentIndex++;
     currentIndex = currentIndex >= bgInner.length ? 0 : currentIndex;
     imgBanner.style.marginLeft = `-${mainBanner.clientWidth * currentIndex}px`;
-    list.forEach((index) => {
-      for (let i = 0; i < list.length; i++) {
-        console.log("list의 길이 : ", list.length);
-        if (index.className !== "list active") {
-          index.classList.add(ACTIVE_NAME);
-          list[i].classList.remove(ACTIVE_NAME);
-        } else if (index.className !== "list") {
-          index.classList.add(ACTIVE_NAME);
-          list[i].classList.remove(ACTIVE_NAME);
-        }
-      }
-    });
+    console.log(currentIndex);
+    if (currentIndex != list.length - 1) {
+      list[list.length - 1].classList.remove(ACTIVE_NAME);
+    }
+    list[currentIndex].classList.add(ACTIVE_NAME);
+    list[currentIndex - 1].classList.remove(ACTIVE_NAME);
   }, 4000);
 }
 
