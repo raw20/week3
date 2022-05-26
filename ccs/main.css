@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh !important;
+}
+
+li,
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.txt-bold {
+  font-weight: 700;
+}
+
+.main-banner {
+  width: 1535px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main-banner > .img-banner {
+  transition: 0.3s ease-out;
+  display: flex;
+  height: 100%;
+}
+
+.img-banner .bg-inner.in1 {
+  background-color: #c3caff;
+}
+
+.bg-inner.in2 {
+  background-color: #f8ebdb;
+}
+
+.bg-inner.in3 {
+  background-color: #bce6c2;
+}
+
+.bg-inner.in4 {
+  background-color: #fff5da;
+}
+
+.bg-inner.in5 {
+  background-color: #000000;
+}
+
+.bg-inner.in6 {
+  background-color: #96f6dc;
+}
+
+.main-banner > .img-banner img {
+  margin: 0 180px;
+  width: 1180px;
+  height: 420px;
+  position: relative;
+}
+
+.main-banner > .backBtn {
+  position: absolute;
+  background: url(../img/bg_promotion_form.png) no-repeat left top;
+  width: 90px;
+  height: 90px;
+  left: 90px;
+  top: 160px;
+  text-indent: -9999px;
+}
+
+.main-banner > .goBtn {
+  position: absolute;
+  background: url(../img/bg_promotion_form.png) no-repeat left -120px;
+  width: 90px;
+  height: 90px;
+  right: 90px;
+  top: 160px;
+  text-indent: -9999px;
+}
+
+.main-banner > .backBtn:hover {
+  background: url(../img/bg_promotion_form.png) no-repeat left -241px;
+}
+
+.main-banner > .goBtn:hover {
+  background: url(../img/bg_promotion_form.png) no-repeat left -361px;
+}
+
+/* 슬라이드 밑 list-bar */
+.banner-list {
+  background-color: rgb(242, 239, 239);
+  width: 1180px;
+  height: 40px;
+  margin-left: 180px;
+  position: absolute;
+  bottom: 0;
+}
+
+.banner-list .list-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-list .list-bar > li {
+  line-height: 40px;
+  width: 192.5px;
+  height: 40px;
+  display: block;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+}
+
+.banner-list .list-bar > .play {
+  background: url(../img/icon_set2.png) no-repeat left top;
+  width: 25px;
+  height: 40px;
+  text-indent: -9999px;
+}
+
+.banner-list .list-bar > li:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  top: 12px;
+  right: 0;
+  background-color: rgba(234, 226, 226, 0.927);
+}
+
+.banner-list .list-bar > li:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  top: 12px;
+  right: 0;
+  background-color: rgba(234, 226, 226, 0.927);
+}
+
+.banner-list .list-bar > li:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  top: 12px;
+  right: 0;
+  background-color: rgba(234, 226, 226, 0.927);
+}
+
+.banner-list .list-bar > li:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  top: 12px;
+  right: 0;
+  background-color: rgba(234, 226, 226, 0.927);
+}
+
+.banner-list .list-bar > li:nth-child(5)::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 15px;
+  top: 12px;
+  right: 0;
+  background-color: rgba(234, 226, 226, 0.927);
+}
+
+.banner-list .list-bar > li:hover {
+  display: block;
+  background-color: #666;
+  font-weight: bold;
+  color: #fff;
+  border-top: 5px solid #000;
+}
+
+.banner-list .list-bar > li.active {
+  display: block;
+  background-color: #666;
+  font-weight: bold;
+  color: #fff;
+  border-top: 5px solid #000;
+}/*# sourceMappingURL=main.css.map */
